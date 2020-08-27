@@ -1,4 +1,4 @@
-class CoursesController < ApplicationController
+class DoctorsController < ApplicationController
   before_action :set_doctor, only: [:show, :destroy]
 
   def index

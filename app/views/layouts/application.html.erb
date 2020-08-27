@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DocAppointment</title>
+    <title>Doc Appointment</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +9,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+ <body>
+  <%= render 'layouts/navbar' %>
+  <div class="container">
     <%= yield %>
-  </body>
+  </div>
+</body>
 </html>
