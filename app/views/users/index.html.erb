@@ -1,5 +1,19 @@
-<h1>Users</h1>
-<%= link_to 'Add User', new_user_path %>
+
+
+
+
+
+
+
+
+
+<div class="container">
+<div class ="patient_home">
+<h1>Patients</h1>
+
+<h4> Please select your name below or Create a new patient below 
+<br>
+<%= link_to "Create Patient", new_user_path, class: "btn btn-success" %>
 <hr />
 <ul>
   <% @users.each do |user| %>
@@ -8,3 +22,5 @@
     </li>
 <% end %>
 </ul>
+</div>
+</div>

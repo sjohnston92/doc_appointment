@@ -1,14 +1,26 @@
-<h1><%= @user.name %></h1>
+
+<div class="container  patient_home">
+<h1> Hello there,<%= @user.name %>!</h1>
 <hr />
-<h2>Doctor</h2>
-<ul>
+<h4><%= link_to 'Create Appointments Here', new_user_appointment_path(@user), class: "button inverted" %></h4>
+<br>
+
+<h5>Patients listed appointment/s with there Doctor</h5>
   <% @user.doctors.each do |doctor| %>
     <li>
-      <%= link_to doctor.name, doctor %>
+    You have a an appointment with <%= link_to doctor.name, doctor %> coming up!
     </li>
   <% end %>
 </ul>
-<br />
-<br />
-<br />
-<%= link_to 'Delete User', @user, method: :delete, class: "button" %>
+<br>
+
+<%= link_to 'Go back', users_path, class: "btn btn-primary" %>
+<br>
+<br>
+
+<p>Delete your account in app</p>
+<%= button_to "Delete Patient", @user, method: :delete, class: "btn btn-danger" %>
+
+
+
+</div>

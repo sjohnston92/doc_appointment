@@ -1,5 +1,10 @@
-<h1>Doctor</h1>
-<%= link_to 'Add Doctor', new_doctor_path %>
+
+
+<div class="contianer doc">
+
+<h1>Doctors</h1>
+
+<%= link_to "Create Doctor", new_doctor_path, class: "btn btn-success" %>
 <hr />
 <h2><%= @doctors.length <= 0 ? "No Doctors" : "" %></h2> 
 <ul>
@@ -9,3 +14,5 @@
     </li>
   <% end %>
 </ul>
+
+</div>
