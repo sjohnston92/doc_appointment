@@ -4,8 +4,11 @@
 
 <h1>Doctors</h1>
 
+
+
 <%= link_to "Create Doctor", new_doctor_path, class: "btn btn-success" %>
 <hr />
+<h4>List of current doctors in network </h4>
 <h2><%= @doctors.length <= 0 ? "No Doctors" : "" %></h2> 
 <ul>
   <% @doctors.each do |doctor| %>

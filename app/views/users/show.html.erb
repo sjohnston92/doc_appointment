@@ -1,14 +1,14 @@
 
 <div class="container  patient_home">
-<h1> Hello there,<%= @user.name %>!</h1>
+<h1> Hello there, <%= @user.name %>!</h1>
 <hr />
-<h4><%= link_to 'Create Appointments Here', new_user_appointment_path(@user), class: "button inverted" %></h4>
+<h4><%= link_to 'Create and View Appointments Here', user_appointments_path(@user), class: "btn btn-success"%></h4>
 <br>
 
-<h5>Patients listed appointment/s with there Doctor</h5>
+<h5>Patients listed Doctor/s</h5>
   <% @user.doctors.each do |doctor| %>
     <li>
-    You have a an appointment with <%= link_to doctor.name, doctor %> coming up!
+    You have an appointment with  <%= link_to doctor.name, doctor %> coming up!
     </li>
   <% end %>
 </ul>

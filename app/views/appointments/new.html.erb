@@ -3,13 +3,14 @@
 <br>
 
 <h4> Appointment Form </h4>
-<%= form_with(model: [@user, @appointment,@doctor], local: true, class: "form" ) do |f| %>
+<%= form_with(model: [@user, @appointment], local: true, class: "form" ) do |f| %>
   <%= f.label :doctor %>
-  <br>
-  <%= f.select :doctor_id, @doctos { |d| [d.name, d.id] } %>
+
+  <% @doctor=%>
+  <%= f.select :doctor_id, @doctor.collect { |d| [d.name, d.id] } %>
   <br />
   <%= f.label :date %>
   <%= f.select :date, ['Dec', 'Jan', 'Feb'] %>
   <br />
-  <%= f.submit nil, class: "green" %>
+  <%= f.submit nil, class: "btn btn-success" %>
 <% end %>

@@ -1,8 +1,18 @@
 <h1><%= @doctor.name %></h1>
 
+<br>
+<h5>Doctors list current list of Appointments </h5>
+  <% @doctor.users.each do |user| %>
+    <li>
+    You have an appointment with <%= link_to user.name, user %> 
+    </li>
+  <% end %>
 
-
-
-
+<br>
+<br>
+<%= link_to 'Go back', doctors_path, class: "btn btn-primary" %>
+<br>
+<br>
+<h6> Remove Doctor from Network <h6>
 <%= button_to "Delete Doctor", @user, method: :delete, class: "btn btn-danger" %>
 

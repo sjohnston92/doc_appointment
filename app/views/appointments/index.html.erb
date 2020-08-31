@@ -1,0 +1,33 @@
+
+<h1> Appointments for <%= @user.name %></h1>
+
+<%= link_to 'Create Appointments Here', new_user_appointment_path(@user), class: "btn btn-success"%>
+<hr />
+
+<ul>
+  <% @jans.each do |jans| %>
+    <li>
+       Hey, <%= jans.user.name %> you have an appointment for January
+      <br />
+      <%= link_to 'Remove', user_appointment_path(@user, jans), method: :delete, class: "btn btn-danger" %>
+    </li>
+  <% end %>
+</ul>
+<ul>
+  <% @decs.each do |dec| %>
+    <li>
+      Hey,<%= decs.user.name %> you have an appointment for December 
+      <br />
+      <%= link_to 'Remove', user_appointment_path(@user, decs), method: :delete, class: "btn btn-danger" %>
+    </li>
+ <% end %>
+</ul>
+<ul>
+  <% @febs.each do |feb| %>
+    <li>
+      Hey,<%= febs.user.name %> you have an appointment for February 
+      <br />
+      <%= link_to 'Remove', user_appointment_path(@user, febs), method: :delete, class: "btn btn-danger" %>
+   </li>
+ <% end %>
+</ul>
